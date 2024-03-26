@@ -1,14 +1,15 @@
 import React from 'react';
 import 'nice-forms.css';
 import { IoArrowBack } from "react-icons/io5";
+import { ROUTES } from '../utils/routes';
 
 
-function Profile() {
+function Profile({setPage}) {
   return (
     <div className="flex flex-col  mx-5">
       <div className="flex flex-row justify-between my-3 items-center">
         <h2 className="text-2xl font-bold">Profile</h2>
-        <button
+        <button onClick= {() => {setPage(ROUTES.GENERATOR)}}
           className="border mr-[1px] p-2 border-solid border-gray-600 rounded-[100%] hover:bg-gray-200 hover:border-2 hover:mr-0 transition duration-300 ease-in-out"
         >
             <IoArrowBack />

@@ -1,9 +1,10 @@
 // Generator.js
 import React from "react";
 import { AiTwotoneSetting } from "react-icons/ai";
+import { ROUTES } from "../utils/routes";
 
 
-function Generator() {
+function Generator({setPage}) {
   return (
     <div className="flex flex-col">
       <div className="flex flex-row justify-between mx-5 my-3 items-center">
@@ -12,7 +13,7 @@ function Generator() {
 
         </button>
         <h2 className="text-2xl font-bold">Linkedin Resume Generator</h2>
-        <button className="border mr-[1px] p-2 border-solid border-gray-600 rounded-[100%] hover:bg-gray-200 hover:border-2 hover:mr-0 transition duration-300 ease-in-out"><AiTwotoneSetting />
+        <button onClick= {() => {setPage(ROUTES.PROFILE)}} className="border mr-[1px] p-2 border-solid border-gray-600 rounded-[100%] hover:bg-gray-200 hover:border-2 hover:mr-0 transition duration-300 ease-in-out"><AiTwotoneSetting />
 </button>
       </div>
       <div className="flex m-5">
