@@ -6,7 +6,7 @@ import Profile from './component/Profile';
 function App() {
   return (
     <div>
-      <Profile />
+      <Generator />
     </div>
   );
 }
