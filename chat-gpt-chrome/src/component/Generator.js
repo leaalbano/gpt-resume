@@ -1,10 +1,20 @@
 // Generator.js
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiTwotoneSetting } from "react-icons/ai";
 import { ROUTES } from "../utils/routes";
-
+import { loadData } from "../utils/localStorage";
 
 function Generator({setPage}) {
+  const [jobDescription, setJobDescription] = useState("");
+
+  useEffect(() => {
+    // Load job description from local storage on component mount
+    const fetchJobDescription = async () => {
+      const fetchedJob = await loadData("jobDescription");
+      setJobDescription(fetchedJob);
+    }
+    fetchJobDescription();
+  }, []);
   return (
     <div className="flex flex-col">
       <div className="flex flex-row justify-between mx-5 my-3 items-center">
@@ -21,7 +31,7 @@ function Generator({setPage}) {
             rows={12}
             className="w-full"
             placeholder="Generated resume"
-            
+            value={jobDescription}
         />
       </div>
     </div>
