@@ -21,6 +21,7 @@ function Generator({setPage}) {
             rows={12}
             className="w-full"
             placeholder="Generated resume"
+            
         />
       </div>
     </div>
